@@ -3,7 +3,7 @@ describe('Login Page', () => {
   it('log in successfully', () => {
 
     //Visit the login page
-    cy.visit('https://www.saucedemo.com/'); //Open the page
+    cy.visit('http://www.saucedemo.com/'); //Open the page
     cy.url().should("contain","inventory.html")
 
   //Add Credentials username and password
