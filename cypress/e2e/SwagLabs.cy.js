@@ -1,7 +1,7 @@
 describe('Login Page Swag Labs', () => {
-  it('passes', () => {
+  it('should log in successfully', () => {
     //Visit the login page
-    cy.visit('https://www.saucedemo.com/')
+    cy.visit('https://www.saucedemo.com/');
 
   //Add Credentials
     cy.get('input[data-test="username"]').type('standard_user');
