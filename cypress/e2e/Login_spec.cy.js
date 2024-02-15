@@ -3,15 +3,16 @@ describe('Login Page', () => {
   it('log in successfully', () => {
 
     //Visit the login page
-    cy.visit('https://www.saucedemo.com/'); //Open the page
+    cy.visit('/') //Open the page
+   
     //cy.url().should("contain","inventory.html")
 
   //Add Credentials username and password
-    cy.get('[name="user-name"]').type('standard_user');
-    cy.get('[name="password"]').type('secret_sauce');
+    cy.get('[name="username"]').type('Admin')
+    cy.get('[name="password"]').type('admin123')
 
     //Click button Login
-    cy.get('[id="login-button"]').click(); // click in login
+    cy.get('[class="oxd-button oxd-button--medium oxd-button--main orangehrm-login-button"]').click() // click in login
 
     //Verify that the user  is logged in correctly
    // cy.url().should('include'. '/inventory.html' )
