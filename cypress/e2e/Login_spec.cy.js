@@ -4,10 +4,11 @@ describe('Login Page', () => {
 
     //Visit the login page
     cy.visit('https://www.saucedemo.com/'); //Open the page
+    cy.url().should("contain","inventory.html")
 
   //Add Credentials username and password
-    cy.get('#user-name').type('standard_user');
-    cy.get('#password').type('secret_sauce');
+    cy.get('[name="user-name"]').type('standard_user');
+    cy.get('[name="password"]').type('secret_sauce');
 
     //Click button Login
     cy.get('#login-button').click(); // click in login
