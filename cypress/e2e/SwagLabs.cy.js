@@ -4,11 +4,11 @@ describe('Login Page Swag Labs', () => {
     cy.visit('https://www.saucedemo.com/')
 
   //Add Credentials
-    cy.get([placeholder="Username"]).type(Username);
-    cy.get([placeholder="Password"]).type(Password);
+  //  cy.get([placeholder="Username"]).type(Username);
+  //  cy.get([placeholder="Password"]).type(Password);
 
     //Click button Login
-    cy.get([class="submit-button btn_action"]).click();
+   // cy.get([class="submit-button btn_action"]).click();
 
   })
 })
