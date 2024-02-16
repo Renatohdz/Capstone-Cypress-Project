@@ -2,6 +2,7 @@
 describe('Login_fail', () => {
 
   beforeEach (()=> {
+    //delete all cookies before each run
     cy.clearAllCookies()
 
     })
