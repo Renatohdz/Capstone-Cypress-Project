@@ -15,7 +15,7 @@ describe('Login Page', () => {
 //it.skip saltar test
   it('log in successfully', () => {
 
-    cy.visit('/') //Open the page
+    
 
   //Add Credentials username and password
     loginPage.nameLabel().type('standard_user')
