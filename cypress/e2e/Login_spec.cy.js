@@ -1,4 +1,4 @@
-import loginPage from '../../support/pages/LoginPage'
+import loginPage from "../support/pages/LoginPage"
 
 describe('Login Page', () => {
   
@@ -13,22 +13,16 @@ describe('Login Page', () => {
 
 //it.only para ejecutar un test 
 //it.skip saltar test
+
   it('log in successfully', () => {
 
+  //Add Credentials username and password
+    loginPage.elements.nameLabel().type('standard_user')
+    loginPage.elements.passwordLabel().type('secret_sauce')
     
 
-  //Add Credentials username and password
-    loginPage.nameLabel().type('standard_user')
-    loginPage.passwordLabel().type('secret_sauce')
-    //cy.get('[id="password"]').type('secret_sauce')
-
     //Click button Login
-    loginPage.bNext().click() //Click in Login 
-
-    //cy.get('[id="login-button"]').click() // click in login
-
-    //Verify that the user  is logged in correctly
-    //cy.url().should('include'. '/inventory.html' )
+   loginPage.elements.bNext().click()
 
     })
 
