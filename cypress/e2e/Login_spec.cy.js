@@ -24,6 +24,9 @@ describe('Login Page', () => {
     //Click button Login
    loginPage.elements.bNext().click()
 
+   //Validacion login exitoso
+      cy.url().should('include','/inventory.html')
+
     })
 
     //test siguente

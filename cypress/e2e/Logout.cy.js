@@ -15,6 +15,9 @@ describe('Logout in wwww.saucedemo.com', () => {
     //Click button Login
     cy.get('[id="login-button"]').click() // click in login
 
+    //Validacion login exitoso
+    cy.url().should('include','/inventory.html')
+
     })
 
   it('Logout page', () => {
@@ -26,7 +29,7 @@ describe('Logout in wwww.saucedemo.com', () => {
    cy.get('[id="logout_sidebar_link"]').click()
 
   //validate the logout session
-  //cy.url('/').should('include'. '/inventory.html' )
+      cy.url().should('include','/')
 
 
   })

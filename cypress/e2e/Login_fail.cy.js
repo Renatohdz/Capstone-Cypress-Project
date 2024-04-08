@@ -16,7 +16,9 @@ describe('Login_fail', () => {
     cy.get('[id="user-name"]').type('locked_out_user')
     cy.get('[id="password"]').type('secret_sauce')
 
-
+    //valida que te quedas en la misma pagina 
+    cy.url().should('include','/')
+    
 
   })
 })
