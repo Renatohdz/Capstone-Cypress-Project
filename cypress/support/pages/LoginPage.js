@@ -10,18 +10,13 @@ class LoginPage {
 
         }
 
-    typeUsername(standard_user){
+    loginUser(standard_user, secret_sauce){
     this.elements.nameLabel().type(standard_user)
+    this.elements.passwordLabel().type(secret_sauce)
+    this.elements.bNext().click()
         }
 
-    typePassword(secret_sauce){
-        this.elements.passwordLabel().type(secret_sauce)
-        }
-
-    clickLogin(){
-        this.elements.bNext().click()
-
-    }    
+     
 
     
 

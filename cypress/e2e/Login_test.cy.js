@@ -9,13 +9,14 @@ describe('Login test', ()=> {
 
         //visit the login page
         cy.visit('/')
+
+        
     })
 
 
     it('Login successful', () => {
-        LoginPage.typeUsername('standard_user')
-        LoginPage.typePassword('secret_sauce')
-        LoginPage.clickLogin()
+       
+        LoginPage.loginUser('standard_user', 'secret_sauce')
 
         inventoryPage.elements.titleSpam().should('have.text','Products')
 
