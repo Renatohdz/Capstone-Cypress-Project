@@ -14,8 +14,10 @@ class inventoryPage {
     logout(){
      this.elements.burMenu().click()
      this.elements.outLink().click()
-        
+
     }
+
+    
 
 }
 
