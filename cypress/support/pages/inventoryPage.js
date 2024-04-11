@@ -24,15 +24,20 @@ class inventoryPage {
     }
 
      addToCart(index) {
-    cy.get('.inventory_item').eq(index).find('.btn_inventory').click()
-    //this.elements.itProd().eq(index).find().this.elements.itBtn().click()
+       cy.get('.inventory_item').eq(index).find('.btn_inventory').click()
+       //this.elements.itProd().eq(index).find().this.elements.itBtn().click()
     }
 
      goToCart() {
-     cy.get('.shopping_cart_link').click()
+       cy.get('.shopping_cart_link').click()
      
     }
+    
+     addToCartSauce(){
+       this.elements.invItem()
+       this.elements.addSaucebox().click()    
 
+    }
     
 
 }

@@ -1,6 +1,6 @@
 import LoginPage from "../support/pages/LoginPage"; 
 import inventoryPage from "../support/pages/inventoryPage";
-
+import yourCart from "../support/pages/yourCart";
 
 describe('Login test', ()=> {
 
@@ -25,7 +25,22 @@ describe('Login test', ()=> {
     
         cy.url().should('include', '/cart.html')
         inventoryPage.elements.ssCart().should('have.text', '3')
+           
+    })
 
+    it('Add Sauce Labs Onesie item to cart', () => {
+
+        LoginPage.loginUser('standard_user', 'secret_sauce')
+        inventoryPage.elements.titleSpam().should('have.text','Products')
+        cy.url().should('include','/inventory.html')//Validacion login exitoso
+
+        //cy.contains('.inventory_item_name', 'Sauce Labs Onesie')
+        inventoryPage.addToCartSauce()
+        yourCart.addYourCart()
+        yourCart.elements.spamCart().should('have.text','Your Cart') // Verifica que estes en la pagina correcta 
+        yourCart.elements.circCart().should('have.text','1') // Verifica que el artículo se ha agregado al carrito correctamente
+        
+        
 
     })
 
