@@ -12,9 +12,9 @@ class inventoryPage {
     itBtn: () =>        cy.get('.btn_inventory'),
     sCart: () =>        cy.get('.shopping_cart_link'),
     ssCart: () =>       cy.get('.shopping_cart_badge'),    
-
-    
-
+    prodCont: () =>     cy.get('.product_sort_container'),    
+    prodItemN: () =>    cy.get('.inventory_item_name'),
+    vaLidPrice: () =>   cy.get('[class="inventory_container"]'),    
     }
 
     logout(){
@@ -39,6 +39,22 @@ class inventoryPage {
 
     }
     
+    sortByPriceLowToHigh() {
+        this.elements.prodCont().select('lohi')
+        
+      }
+
+    validateByPriceLowToHigh() {
+        this.elements.vaLidPrice()
+            .then(($prices)=>{
+               const prices = $prices.map((index, el) => parseFloat(el.innerText.replace('$',''))).toArray()
+               const sortedPrices = [...prices].sort((a, b) => a - b)
+               expect(prices).to.deep.equal(sortedPrices)  
+
+            })
+
+
+    }    
 
 }
 
