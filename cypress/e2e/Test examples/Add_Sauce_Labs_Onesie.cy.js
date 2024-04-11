@@ -1,6 +1,6 @@
-import loginPage from "../support/pages/LoginPage"
-import inventoryPage from "../support/pages/inventoryPage"
-import yourCart from "../support/pages/yourCart"
+import loginPage from "../../support/pages/LoginPage"
+import inventoryPage from "../../support/pages/inventoryPage"
+import yourCart from "../../support/pages/yourCart"
 
 
 describe('add sauce labs',()=>{
