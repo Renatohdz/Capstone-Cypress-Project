@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
 
-    "test": "cypress open './cypress/e2e/*.js'"
+    "open": "cypress open './cypress/e2e/*.js'",
+    "testLogin": "cypress run './cypress/e2e/Login.cy.js'",
+    "testAll": "cypress run './cypress/e2e/*cy.js'"
 
   },
   "keywords": [],
